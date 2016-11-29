@@ -1,6 +1,6 @@
 {
-  "name": "Mantra",
-  "version": "0.1.2",
+  "name": "mantra",
+  "version": "0.1.3",
   "dependencies": {
     "@angular/common": {
       "version": "2.2.1",
@@ -125,6 +125,11 @@
       "from": "@types/underscore.string@0.0.30",
       "resolved": "https://registry.npmjs.org/@types/underscore.string/-/underscore.string-0.0.30.tgz",
       "dev": true
+    },
+    "@vaadin/angular2-polymer": {
+      "version": "1.0.0-beta5",
+      "from": "@vaadin/angular2-polymer@>=1.0.0-beta5 <2.0.0",
+      "resolved": "https://registry.npmjs.org/@vaadin/angular2-polymer/-/angular2-polymer-1.0.0-beta5.tgz"
     },
     "angular2-meteor": {
       "version": "0.7.1",
