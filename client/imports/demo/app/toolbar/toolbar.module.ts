@@ -5,6 +5,7 @@ import { ToolbarActions } from './toolbar.actions';
 import { ToolbarReducer } from './toolbar.reducer';
 import { ToolbarEffects } from './toolbar.effects';
 import SharedModule from '/client/imports/shared/shared.module';
+import { PolymerElement } from '@vaadin/angular2-polymer';
 import { ToolbarService } from './toolbar.service';
 import { EffectsModule } from '@ngrx/effects';
 
@@ -15,7 +16,12 @@ import { EffectsModule } from '@ngrx/effects';
         ToolbarModule.effects().map(effects => EffectsModule.run(effects))
     ],
     declarations: [
-        ToolbarComponent
+        ToolbarComponent,
+        PolymerElement('paper-header-panel'),
+        PolymerElement('paper-icon-button'),
+        PolymerElement('app-toolbar'),
+        PolymerElement('app-drawer-layout'),
+        PolymerElement('app-drawer')
     ],
     providers: [ToolbarActions],
     exports: [ToolbarComponent]

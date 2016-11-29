@@ -1,4 +1,4 @@
-<div id="app-toolbar">
-    <button (click)="toggle()">{{(opened ? 'close' : 'open') + ' menu'}}</button>
-    <div id="toolbar">{{(toolbar$ | async).title}}</div>
-</div>
+<app-toolbar>
+    <paper-icon-button icon="{{opened ? 'icons:arrow-back' : 'icons:menu'}}" (click)="toggle()" drawer-toggle></paper-icon-button>
+    <div main-title>{{(toolbar$ | async).title}}</div>
+</app-toolbar>

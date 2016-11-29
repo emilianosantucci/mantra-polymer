@@ -7,11 +7,12 @@ import { AppComponent } from './app.component';
 import { initialState } from './app.state';
 import { RouterModule, Route } from '@angular/router';
 import { routerReducer } from '@ngrx/router-store';
-import { appReducer } from '/client/imports/demo/app/app.reducer';
-import ToolbarModule from '/client/imports/demo/app/toolbar/toolbar.module';
-import NavigationSidebarModule from '/client/imports/demo/app/navigation-sidebar/navigation-sidebar.module';
 import { appRoutes } from './app.routes';
 import SharedModule from '../../shared/shared.module';
+import ToolbarModule from './toolbar/toolbar.module';
+import { appReducer } from './app.reducer';
+import NavigationSidebarModule from './navigation-sidebar/navigation-sidebar.module';
+import { PolymerElement } from '@vaadin/angular2-polymer';
 
 @NgModule({
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -26,7 +27,12 @@ import SharedModule from '../../shared/shared.module';
         NavigationSidebarModule.forRoot()
     ],
     declarations: [
-        AppComponent
+        AppComponent,
+        PolymerElement('app-drawer-layout'),
+        PolymerElement('app-drawer'),
+        PolymerElement('app-header-layout'),
+        PolymerElement('app-toolbar'),
+        PolymerElement('app-header')
     ],
     providers: [],
     bootstrap: [AppComponent]

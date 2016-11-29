@@ -7,6 +7,7 @@ import { homeRoutes } from '/client/imports/demo/+home/home.routes';
 import { homeReducer } from '/client/imports/demo/+home/home.reducer';
 import { HomeService } from '/client/imports/demo/+home/home.service';
 import { HomeActions } from '/client/imports/demo/+home/home.actions';
+import { PolymerElement } from '@vaadin/angular2-polymer';
 
 @NgModule({
     imports: [
@@ -14,7 +15,8 @@ import { HomeActions } from '/client/imports/demo/+home/home.actions';
         RouterModule.forChild(homeRoutes)
     ],
     declarations: [
-        HomeComponent
+        HomeComponent,
+        PolymerElement('paper-card')
     ],
     providers: [HomeActions, HomeService],
     exports: [HomeComponent]
